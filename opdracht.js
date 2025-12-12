@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("acceptBtn:", acceptBtn);
   console.log("declineBtn:", declineBtn);
 
-  // Als geen keuze is opgeslagen → toon melding
   if (!localStorage.getItem("cookieChoice")) {
     cookieBox.style.display = "flex";
   }
@@ -44,4 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cookieChoice", "declined");
     cookieBox.style.display = "none";
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+  function updateGreeting() {
+    const greeting = document.getElementById("greeting");
+    if (!greeting) return; 
+
+    const hour = new Date().getHours();
+    let text = "";
+    let emoji = "";
+
+    if (hour >= 5 && hour < 12) {
+      text = "Goedemorgen";
+      emoji = "🌤️";
+    } else if (hour >= 12 && hour < 18) {
+      text = "Goedemiddag";
+      emoji = "🌞";
+    } else if (hour >= 18 && hour < 23) {
+      text = "Goedenavond";
+      emoji = "🌆";
+    } else {
+      text = "Goedenacht";
+      emoji = "🌙";
+    }
+
+    greeting.textContent = `${emoji} ${text}!`;
+    greeting.style.fontSize = "1.8rem";
+    greeting.style.fontWeight = "600";
+    greeting.style.marginBottom = "10px";
+    greeting.style.fontFamily = "sans-serif";
+  }
+
+  updateGreeting();
 });
