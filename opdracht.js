@@ -1,3 +1,10 @@
+const hamburger = document.getElementById("hamburger");
+const navMobile = document.getElementById("nav-mobile");
+
+hamburger.addEventListener("click", () => {
+  navMobile.classList.toggle("show");
+});
+
 // DARK MODE
 const darkSwitch = document.getElementById("darkSwitch");
 const savedTheme = localStorage.getItem("theme");
