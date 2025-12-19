@@ -11,8 +11,6 @@
       color: #222;
       scroll-behavior: smooth;
     }
-    
-
     header {
       position: fixed;
       top: 0;
@@ -28,7 +26,10 @@
   display: flex;
   gap: 20px;
 }
-
+ #countdown {
+      font-size: 25px;
+      color: #64fbf3;
+    }
 #hamburger,
 #nav-mobile {
   display: none;
