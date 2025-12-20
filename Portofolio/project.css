@@ -38,7 +38,6 @@
 /* Mobiel */
 @media (max-width: 768px) {
 
-  /* Desktop nav uit */
   .nav-desktop {
     display: none;
   }

@@ -15,7 +15,7 @@ var x = setInterval(function () {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
-// HAMBURGER MENU
+// HAMBURGER menu
 const hamburger = document.getElementById("hamburger");
 const navMobile = document.getElementById("nav-mobile");
 
